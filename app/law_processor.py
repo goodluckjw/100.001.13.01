@@ -140,6 +140,7 @@ def run_search_logic(query, unit="법률"):
                         for m in 목.findall("목내용"):
                             if m.text and keyword_clean in clean(m.text):
                                 줄들 = [line.strip() for line in m.text.splitlines()]
+                                줄들 = [line for line in 줄들 if line]  # 빈 줄 제거 추가
                                 줄들 = [highlight(line, query) for line in 줄들]
                                 if 줄들:
                                     하위검색됨 = True
