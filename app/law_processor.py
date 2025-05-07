@@ -143,7 +143,7 @@ def run_search_logic(query, unit="법률"):
                                 줄들 = [highlight(line, query) for line in 줄들]
                                 if 줄들:
                                     하위검색됨 = True
-                                    항덩어리.append("&nbsp;&nbsp;&nbsp;&nbsp;" + "<br>&nbsp;&nbsp;&nbsp;&nbsp;".join(줄들))
+                                    항덩어리.append("&nbsp;&nbsp;&nbsp;&nbsp;" + "<br>".join(줄들))
 
                 if 항출력 or 하위검색됨:
                     if not 조출력 and not 첫_항출력됨:
